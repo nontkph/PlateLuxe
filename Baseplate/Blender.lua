@@ -8,7 +8,7 @@ return {
 		local Baseplate = B or Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
-		Baseplate.Color = Color3.new(0.26, 0.26, 0.26)
+		Baseplate.Color = Color3.fromRGB(66, 66, 66)
 		Baseplate.Anchored = true
 		Baseplate.Locked = true
 		Baseplate.Material = Enum.Material.Neon
@@ -40,24 +40,24 @@ return {
 
 		local G = Instance.new("Frame")
 		G.Name = "G"
-		G.AnchorPoint = Vector2.new(0.50, 0.50)
-		G.Size = UDim2.new(0.00, 1.00, 1.00, 0.00)
-		G.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-		G.Position = UDim2.new(0.50, 0.00, 0.50, 0.00)
+		G.AnchorPoint = Vector2.new(0.5, 0.5)
+		G.Size = UDim2.new(0, 1, 1, 0)
+		G.BorderColor3 = Color3.new(0, 0, 0)
+		G.Position = UDim2.new(0.5, 0.0, 0.5, 0)
 		G.BorderSizePixel = 0
 		G.BackgroundTransparency = 0.5
-		G.BackgroundColor3 = Color3.new(0.67, 1.00, 0.00)
+		G.BackgroundColor3 = Color3.new(0.67, 1, 0)
 		G.Parent = Line
 
 		local R = Instance.new("Frame")
 		R.Name = "R"
-		R.AnchorPoint = Vector2.new(0.50, 0.50)
-		R.Size = UDim2.new(1.00, 0.00, 0.00, 1.00)
-		R.BorderColor3 = Color3.new(0.00, 0.00, 0.00)
-		R.Position = UDim2.new(0.50, 0.00, 0.50, 0.00)
+		R.AnchorPoint = Vector2.new(0.5, 0.5)
+		R.Size = UDim2.new(1, 0, 0.0, 1)
+		R.BorderColor3 = Color3.new(0, 0, 0)
+		R.Position = UDim2.new(0.5, 0, 0.5, 0)
 		R.BorderSizePixel = 0
 		R.BackgroundTransparency = 0.5
-		R.BackgroundColor3 = Color3.new(1.00, 0.33, 0.50)
+		R.BackgroundColor3 = Color3.fromRGB(255, 85, 127)
 		R.Parent = Line
 	end,
 	
