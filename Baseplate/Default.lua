@@ -31,7 +31,8 @@ return {
 	
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-
+		Lighting:ClearAllChildren()
+		
 		local Sky = Instance.new("Sky")
 		Sky.SkyboxUp = "rbxassetid://6412503613"
 		Sky.MoonTextureId = "rbxassetid://6444320592"
