@@ -4,19 +4,17 @@ return {
 	["Description"] = "this style is blender default style";
 	["Version"] = 1;
 	---: funuc
-	["Baseplate"] = function(Baseplate: BasePart)
-		local Baseplate = Baseplate or Instance.new("Part")
+	["Baseplate"] = function(B: BasePart)
+		local Baseplate = B or Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
 		Baseplate.Color = Color3.new(0.26, 0.26, 0.26)
 		Baseplate.Anchored = true
 		Baseplate.Locked = true
 		Baseplate.Material = Enum.Material.Neon
-		Baseplate.Size = Vector3.new(2048.00, 16.00, 2048.00)
+		Baseplate.Size = Vector3.new(2048, 16, 2048)
 		Baseplate.BottomSurface = Enum.SurfaceType.Smooth
 		Baseplate.BrickColor = BrickColor.new("Medium brown")
-		Baseplate.Position = Vector3.new(0.00, -8.00, 0.00)
-		Baseplate.CFrame = CFrame.new(0.00, -8.00, 0.00, -0.00, -0.00, -1.00)
 		Baseplate.Parent = game:GetService("Workspace")
 
 		local Texture = Instance.new("Texture")
@@ -24,7 +22,7 @@ return {
 		Texture.OffsetStudsV = 1
 		Texture.Face = Enum.NormalId.Top
 		Texture.StudsPerTileU = 5
-		Texture.Transparency = 0.800000011920929
+		Texture.Transparency = 0.8
 		Texture.StudsPerTileV = 5
 		Texture.ZIndex = 0
 		Texture.Texture = "rbxassetid://15505245889"
