@@ -1,5 +1,5 @@
 return {	
-	["Image"] = "rbxassetid://131216202041851";
+	["Image"] = "rbxassetid://102831349631786";
 	["Title"] = "Default";
 	["Description"] = "Default Roblox Style";
 	
