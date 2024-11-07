@@ -2,7 +2,7 @@ return {
 	["Image"] = "rbxassetid://131216202041851";
 	["Title"] = "Blender";
 	["Description"] = "this style is blender default style";
-	
+	["Version"] = 1;
 	---: funuc
 	["Baseplate"] = function(Baseplate: BasePart)
 		local Baseplate = Baseplate or Instance.new("Part")
