@@ -6,8 +6,6 @@ return {
 	---: funuc
 	["Baseplate"] = function(Baseplate: BasePart)
 		local Baseplate = Baseplate or Instance.new("Part")
-		Baseplate:ClearAllChildren()
-		task.wait()
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
 		Baseplate.Color = Color3.new(0.26, 0.26, 0.26)
@@ -67,8 +65,6 @@ return {
 	
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-		Lighting:ClearAllChildren()
-		task.wait()
 		local Sky = Instance.new("Sky")
 		Sky.StarCount = 0
 		Sky.SkyboxUp = "rbxassetid://2350402582"
