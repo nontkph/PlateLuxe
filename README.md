@@ -1,11 +1,5 @@
 # Baseplate Upgrade Plugin
 
- __    __     __     __  __        ______   __  __   
-/\ "-./  \   /\ \   /\ \/\ \      /\__  _\ /\ \_\ \  
-\ \ \-./\ \  \ \ \  \ \ \_\ \     \/_/\ \/ \ \  __ \ 
- \ \_\ \ \_\  \ \_\  \ \_____\       \ \_\  \ \_\ \_\
-  \/_/  \/_/   \/_/   \/_____/        \/_/   \/_/\/_/
-
 ## About
 This plugin was developed by **nontkph_40404** to help users easily upgrade their baseplate in Roblox Studio. It's provided for free to support the Roblox development community.
 
