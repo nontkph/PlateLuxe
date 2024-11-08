@@ -14,7 +14,6 @@ return {
 		Baseplate.Material = Enum.Material.Neon
 		Baseplate.Size = Vector3.new(2048, 16, 2048)
 		Baseplate.BottomSurface = Enum.SurfaceType.Smooth
-		Baseplate.BrickColor = BrickColor.new("Medium brown")
 		Baseplate.Parent = game:GetService("Workspace")
 
 		local Texture = Instance.new("Texture")
