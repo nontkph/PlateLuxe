@@ -7,11 +7,9 @@ return {
 	["Baseplate"] = function(B: BasePart)
 		local Baseplate = B or Instance.new("Part")
 		
-		for i, v in next, Baseplate:GetChildren() do
+		for i, v in next, Baseplate:GetChildren() do task.wait()
 			v:Destroy()
 		end
-		
-		task.wait()
 		
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
@@ -37,12 +35,9 @@ return {
 
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-		warn("clear")
-		for i, v in next, Lighting:GetChildren() do
-			print("clear : ", v)
+		for i, v in next, Lighting:GetChildren() do task.wait()
 			v:Destroy()
 		end
-		task.wait()
 		
 		local Atmosphere = Instance.new("Atmosphere")
 		Atmosphere.Density = 0.3
