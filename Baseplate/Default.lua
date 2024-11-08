@@ -2,10 +2,10 @@ return {
 	["Image"] = "rbxassetid://102831349631786";
 	["Title"] = "Default";
 	["Description"] = "Default Roblox Style";
-	
+	["Version"] = 1;
 	---: funuc
-	["Baseplate"] = function(Baseplate: BasePart)
-		local Baseplate = Baseplate or Instance.new("Part")
+	["Baseplate"] = function(B: BasePart)
+		local Baseplate = B or Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate:ClearAllChildren()
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
@@ -14,7 +14,6 @@ return {
 		Baseplate.Locked = true
 		Baseplate.Size = Vector3.new(2048.00, 16.00, 2048.00)
 		Baseplate.BottomSurface = Enum.SurfaceType.Smooth
-		Baseplate.BrickColor = BrickColor.new("Dark grey metallic")
 		Baseplate.Position = Vector3.new(0.00, -8.00, 0.00)
 		Baseplate.CFrame = CFrame.new(0.00, -8.00, 0.00, -0.00, -0.00, -1.00)
 		Baseplate.Parent = game:GetService("Workspace")
@@ -27,12 +26,18 @@ return {
 		Texture.Color3 = Color3.new(0.00, 0.00, 0.00)
 		Texture.Texture = "rbxassetid://6372755229"
 		Texture.Parent = Baseplate
+		
+		for i, v in next, Baseplate:GetChildren() do
+			if v ~= Texture then
+				v:Destroy()
+			end
+		end
+
 	end,
-	
+
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-		Lighting:ClearAllChildren()
-		
+
 		local Sky = Instance.new("Sky")
 		Sky.SkyboxUp = "rbxassetid://6412503613"
 		Sky.MoonTextureId = "rbxassetid://6444320592"
@@ -70,5 +75,12 @@ return {
 		DepthOfField.FarIntensity = 0.10000000149011612
 		DepthOfField.InFocusRadius = 30
 		DepthOfField.Parent = Lighting
+		
+
+		for i, v in next, Lighting:GetChildren() do
+			if v ~= Sky and v ~= Atmosphere and v ~= SunRays and v ~= Bloom and v ~= DepthOfField then
+				v:Destroy()
+			end
+		end
 	end,
 }
