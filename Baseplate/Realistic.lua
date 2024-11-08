@@ -1,19 +1,22 @@
 return {	
 	["Image"] = "rbxassetid://121166389795676";
 	["Title"] = "Realistic";
-	["Description"] = "Classic sky and baseplate grid";
+	["Description"] = "Realistic lighting and material grid.";
 	["Version"] = 1;
 	---: funuc
 	["Baseplate"] = function(B: BasePart)
 		local Baseplate = B or Instance.new("Part")
+		local Baseplate = Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
-		Baseplate.Color = Color3.fromRGB(90, 90, 90)
+		Baseplate.Color = Color3.new(0.35, 0.35, 0.35)
 		Baseplate.Anchored = true
 		Baseplate.Locked = true
 		Baseplate.Material = Enum.Material.Glass
 		Baseplate.Size = Vector3.new(2048, 16, 2048)
 		Baseplate.BottomSurface = Enum.SurfaceType.Smooth
+		Baseplate.Position = Vector3.new(0, -8, 0)
+		Baseplate.CFrame = CFrame.new(0, -8, 0, -0, -0, -1)
 		Baseplate.Parent = game:GetService("Workspace")
 
 		local Texture = Instance.new("Texture")
@@ -34,7 +37,7 @@ return {
 
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-
+		
 		local Atmosphere = Instance.new("Atmosphere")
 		Atmosphere.Density = 0.3
 		Atmosphere.Color = Color3.new(0.78, 0.78, 0.78)
@@ -74,8 +77,9 @@ return {
 		SunRays.Parent = Lighting
 
 
+
 		for i, v in next, Lighting:GetChildren() do
-			if v ~= Realistic_Sky and v ~= Atmosphere and v ~= SunRays and v ~= Bloom and v ~= ColorCorrection and v ~= Blur then
+			if v ~= Bloom and v ~= Atmosphere and v ~= SunRays and v ~= Realistic_Sky and v ~= Blur and v ~= ColorCorrection then
 				v:Destroy()
 			end
 		end
