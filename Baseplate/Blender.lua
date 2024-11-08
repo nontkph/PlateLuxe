@@ -58,6 +58,13 @@ return {
 		R.BackgroundTransparency = 0.5
 		R.BackgroundColor3 = Color3.fromRGB(255, 85, 127)
 		R.Parent = Line
+		
+		for i, v in next, Baseplate:GetChildren() do
+			if v ~= Texture and v ~= Line and v ~= G and v ~= R then
+				v:Destroy()
+			end
+		end
+
 	end,
 	
 	["Lighting"] = function()
@@ -75,7 +82,7 @@ return {
 		Sky.Parent = Lighting
 
 		local Atmosphere = Instance.new("Atmosphere")
-		Atmosphere.Density = 0.6000000238418579
+		Atmosphere.Density = 0.6
 		Atmosphere.Color = Color3.new(0.88, 0.89, 0.98)
 		Atmosphere.Decay = Color3.new(0.88, 0.89, 0.98)
 		Atmosphere.Parent = Lighting
@@ -85,5 +92,11 @@ return {
 		SunRays.Intensity = 0
 		SunRays.Spread = 0
 		SunRays.Parent = Lighting
+		
+		for i, v in next, Lighting:GetChildren() do
+			if v ~= Sky and v ~= Atmosphere and v ~= SunRays then
+				v:Destroy()
+			end
+		end
 	end,
 }
