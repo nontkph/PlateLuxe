@@ -37,8 +37,9 @@ return {
 
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
-		
+		warn("clear")
 		for i, v in next, Lighting:GetChildren() do
+			print("clear : ", v)
 			v:Destroy()
 		end
 		task.wait()
