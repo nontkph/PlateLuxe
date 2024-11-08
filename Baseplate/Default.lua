@@ -8,7 +8,7 @@ return {
 		local Baseplate = B or Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
-		Baseplate.Color = Color3.new(0.36, 0.36, 0.36)
+		Baseplate.Color = Color3.fromRGB(91, 91, 91)
 		Baseplate.Anchored = true
 		Baseplate.Locked = true
 		Baseplate.Size = Vector3.new(2048, 16, 2048)
