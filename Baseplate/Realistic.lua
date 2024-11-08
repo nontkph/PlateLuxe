@@ -6,7 +6,13 @@ return {
 	---: funuc
 	["Baseplate"] = function(B: BasePart)
 		local Baseplate = B or Instance.new("Part")
-		local Baseplate = Instance.new("Part")
+		
+		for i, v in next, Baseplate:GetChildren() do
+			v:Destroy()
+		end
+		
+		task.wait()
+		
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
 		Baseplate.Color = Color3.new(0.35, 0.35, 0.35)
@@ -27,16 +33,15 @@ return {
 		Texture.Texture = "rbxassetid://7045572623"
 		Texture.Parent = Baseplate
 
-		for i, v in next, Baseplate:GetChildren() do
-			if v ~= Texture then
-				v:Destroy()
-			end
-		end
-
 	end,
 
 	["Lighting"] = function()
 		local Lighting = game:GetService("Lighting")
+		
+		for i, v in next, Lighting:GetChildren() do
+			v:Destroy()
+		end
+		task.wait()
 		
 		local Atmosphere = Instance.new("Atmosphere")
 		Atmosphere.Density = 0.3
@@ -76,12 +81,5 @@ return {
 		SunRays.Name = "SunRays"
 		SunRays.Parent = Lighting
 
-
-
-		for i, v in next, Lighting:GetChildren() do
-			if v ~= Bloom and v ~= Atmosphere and v ~= SunRays and v ~= Realistic_Sky and v ~= Blur and v ~= ColorCorrection then
-				v:Destroy()
-			end
-		end
 	end,
 }
