@@ -8,21 +8,18 @@ return {
 		local Baseplate = B or Instance.new("Part")
 		Baseplate.Name = "Baseplate"
 		Baseplate.TopSurface = Enum.SurfaceType.Smooth
-		Baseplate.Color = Color3.new(0.35, 0.35, 0.35)
+		Baseplate.Color = Color3.fromRGB(90, 90, 90)
 		Baseplate.Anchored = true
 		Baseplate.Locked = true
 		Baseplate.Material = Enum.Material.Glass
-		Baseplate.Size = Vector3.new(2048.00, 16.00, 2048.00)
+		Baseplate.Size = Vector3.new(2048, 16, 2048)
 		Baseplate.BottomSurface = Enum.SurfaceType.Smooth
-		Baseplate.BrickColor = BrickColor.new("Dark grey metallic")
-		Baseplate.Position = Vector3.new(0.00, -8.00, 0.00)
-		Baseplate.CFrame = CFrame.new(0.00, -8.00, 0.00, -0.00, -0.00, -1.00)
 		Baseplate.Parent = game:GetService("Workspace")
 
 		local Texture = Instance.new("Texture")
 		Texture.Face = Enum.NormalId.Top
 		Texture.StudsPerTileU = 8
-		Texture.Transparency = 0.3499999940395355
+		Texture.Transparency = 0.35
 		Texture.StudsPerTileV = 8
 		Texture.Texture = "rbxassetid://7045572623"
 		Texture.Parent = Baseplate
